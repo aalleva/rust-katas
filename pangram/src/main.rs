@@ -1,21 +1,15 @@
+use std::collections::HashSet;
+
 fn is_pangram(a_string: &str) -> bool {
-    let mut alphabet = [false; 26];
-    
+    let mut letters = HashSet::new();
+
     a_string.chars()
         .filter (|c| c.is_alphabetic())
-        .map (|c| c.to_ascii_lowercase())
         .for_each (|c| {
-            let index = c.to_ascii_lowercase() as usize - 'a' as usize;
-            alphabet[index] = true;
+            letters.insert(c.to_ascii_lowercase());
         } );
 
-    for b in alphabet.iter() {
-        if !b {
-            return false;
-        }
-    }
-
-    return true;
+    letters.len() == 26
 }
 
 fn main() {
