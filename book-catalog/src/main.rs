@@ -24,9 +24,9 @@ impl Book {
 
         if self.is_available() {
             self.available = false;
-            return Some("Borrowed successfully".to_string());
+            Some("Borrowed successfully".to_string())
         } else {
-            return None;
+            None
         }
     }
 
@@ -35,11 +35,7 @@ impl Book {
     }
 
     fn description(&self) -> String {
-        let mut available = "No";
-
-        if self.available {
-            available = "Yes";
-        }
+        let available = if self.available { "Yes" } else { "No" };
 
         format!("Title: {}, Author: {}, Year: {}, Available: {}", self.title, self.author, self.year, available)
     }
