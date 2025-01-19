@@ -46,7 +46,7 @@ use math_utils::geometry;
 use math_utils::statistics;
 
 fn main() {
- println!("Add: {}", basic::add(5, 10));
- println!("Circle Area: {:.2}", geometry::circle_area(5.0));
- println!("Mean: {:?}", statistics::mean(&[1.0, 2.0, 3.0]));
+    println!("Add: {}", basic::add(5, 10));
+    println!("Circle Area: {:.2}", geometry::circle_area(5.0));
+    println!("Mean: {:?}", statistics::mean(&[1.0, 2.0, 3.0]));
 }
