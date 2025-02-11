@@ -1,0 +1,4 @@
+Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.
+Rust empowers developers to build reliable and efficient software.
+The Rust community values performance, safety, and productivity.
+Rust is great! Rust is fun. Rust is love, Rust is life.
